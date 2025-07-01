@@ -1,6 +1,4 @@
-msg_task1
-task1_send_err
-task1_receive_time
-msg_task2
-task2_send_err
-task2_receive_time
+tx1_err
+tx2_err
+msg1
+msg2
