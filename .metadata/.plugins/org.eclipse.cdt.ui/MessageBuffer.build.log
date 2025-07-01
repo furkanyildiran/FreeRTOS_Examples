@@ -1,0 +1,17 @@
+16:28:22 **** Incremental Build of configuration Debug for project MessageBuffer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MessageBuffer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\HP\Desktop\RTOS_examples\MessageBuffer\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MessageBuffer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MessageBuffer.elf
+ 
+arm-none-eabi-size  MessageBuffer.elf 
+arm-none-eabi-objdump -h -S MessageBuffer.elf  > "MessageBuffer.list"
+   text	   data	    bss	    dec	    hex	filename
+  36104	    472	  21040	  57616	   e110	MessageBuffer.elf
+Finished building: default.size.stdout
+ 
+Finished building: MessageBuffer.list
+ 
+
+16:28:23 Build Finished. 0 errors, 0 warnings. (took 1s.354ms)
+
